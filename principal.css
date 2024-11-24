@@ -1,0 +1,244 @@
+/* Reset e Variáveis */
+:root {
+    --primary-color: #4f46e5;
+    --secondary-color: #818cf8;
+    --dark-color: #1e1b4b;
+    --light-color: #f8fafc;
+    --success-color: #10b981;
+    --text-color: #334155;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Header e Navegação */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-login {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    margin-top: 60px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn-destaque {
+    display: inline-block;
+    background-color: var(--success-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: var(--transition);
+}
+
+/* Seção de Cursos */
+#cursos {
+    padding: 4rem 2rem;
+    background-color: var(--light-color);
+}
+
+.grid-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.curso-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.curso-card img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.btn-curso {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+/* Benefícios */
+.grid-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.beneficio {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Newsletter */
+#newsletter {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.form-newsletter {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.form-newsletter input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.form-newsletter button {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 4rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+    }
+    
+    #hero h1 {
+        font-size: 2rem;
+    }
+    
+    .form-newsletter {
+        flex-direction: column;
+    }
+    
+    .grid-cursos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.maixou {
+    width: 10px;
+}

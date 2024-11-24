@@ -1,0 +1,139 @@
+<main>
+    <section id="introducao" class="secao-interativa">
+        <h2>O que é HTML?</h2>
+        <div class="conteudo-animado">
+            <p class="destaque">HTML (HyperText Markup Language) é a linguagem fundamental para criar páginas web.</p>
+            <link rel="stylesheet" href="alge.css">
+            <div class="card-explicativo">
+                <h3>Significado de cada letra:</h3>
+                <ul>
+                    <li><strong>H</strong> - HyperText (Hipertexto)</li>
+                    <li><strong>T</strong> - Text (Texto)</li>
+                    <li><strong>M</strong> - Markup (Marcação)</li>
+                    <li><strong>L</strong> - Language (Linguagem)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="elementos" class="secao-interativa">
+        <h2>Elementos Fundamentais</h2>
+        
+        <article class="elemento-card">
+            <h3>Estrutura Básica</h3>
+            <pre>
+                <code>
+                    <article class="elemento-card">
+                        <h3>Elementos de Texto</h3>
+                        <div class="grid-elementos">
+                            <div class="elemento">
+                                <code>&lt;h1&gt; até &lt;h6&gt;</code>
+                                <p>Títulos e subtítulos</p>
+                            </div>
+                            <div class="elemento">
+                                <code>&lt;p&gt;</code>
+                                <p>Parágrafos de texto</p>
+                            </div>
+                            <div class="elemento">
+                                <code>&lt;span&gt;</code>
+                                <p>Texto inline</p>
+                            </div>
+                        </div>
+                    </article>
+            
+                    <article class="elemento-card">
+                        <h3>Elementos Semânticos</h3>
+                        <div class="grid-elementos">
+                            <div class="elemento">
+                                <code>&lt;header&gt;</code>
+                                <p>Cabeçalho da página ou seção</p>
+                            </div>
+                            <div class="elemento">
+                                <code>&lt;nav&gt;</code>
+                                <p>Menu de navegação</p>
+                            </div>
+                            <div class="elemento">
+                                <code>&lt;main&gt;</code>
+                                <p>Conteúdo principal</p>
+                            </div>
+                            <div class="elemento">
+                                <code>&lt;footer&gt;</code>
+                                <p>Rodapé da página</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            
+                <section id="atributos" class="secao-interativa">
+                    <h2>Atributos HTML</h2>
+                    <div class="tabela-atributos">
+                        <div class="atributo">
+                            <h4>class</h4>
+                            <p>Define uma classe para estilização</p>
+                        </div>
+                        <div class="atributo">
+                            <h4>id</h4>
+                            <p>Identificador único do elemento</p>
+                        </div>
+                        <div class="atributo">
+                            <h4>src</h4>
+                            <p>Define fonte de mídia (imagens, vídeos)</p>
+                        </div>
+                        <div class="atributo">
+                            <h4>href</h4>
+                            <p>Define links e referências</p>
+                        </div>
+                    </div>
+                </section>
+            
+                <section id="exemplos" class="secao-interativa">
+                    <h2>Área de Testes</h2>
+                    <div class="editor-interativo">
+                        <div class="codigo">
+                            <textarea id="editor" rows="10" placeholder="Digite seu código HTML aqui"></textarea>
+                        </div>
+                        <div class="visualizacao">
+                            <h3>Resultado:</h3>
+                            <iframe id="resultado"></iframe>
+                        </div>
+                        <button onclick="executarCodigo()">Ver Resultado</button>
+                    </div>
+                </section>
+            
+                <section id="dicas" class="secao-interativa">
+                    <h2>Dicas Importantes</h2>
+                    <div class="cards-dicas">
+                        <div class="dica">
+                            <h3>Indentação</h3>
+                            <p>Mantenha seu código organizado usando espaços ou tabs</p>
+                        </div>
+                        <div class="dica">
+                            <h3>Comentários</h3>
+                            <p>Use &lt;!-- comentário --&gt; para documentar seu código</p>
+                        </div>
+                        <div class="dica">
+                            <h3>Validação</h3>
+                            <p>Sempre valide seu código HTML usando o W3C Validator</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            
+            <footer>
+                <div class="footer-content">
+                    <p>Explore, aprenda e pratique HTML!</p>
+                    <nav class="footer-nav">
+                        <a href="#top">Voltar ao topo</a>
+                        <a href="#contato">Contato</a>
+                        <a href="#sobre">Sobre</a>
+                    </nav>
+                </div>
+            </footer>
+            
+            <script>
+                function executarCodigo() {
+                    const codigo = document.getElementById('editor').value;
+                    const iframe = document.getElementById('resultado');
+                    iframe.srcdoc = codigo;
+                }
+            </script>

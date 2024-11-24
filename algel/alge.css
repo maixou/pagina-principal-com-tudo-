@@ -1,0 +1,183 @@
+/* Reset básico e variáveis */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --background-color: #f8fafc;
+    --text-color: #1f2937;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --spacing: 1rem;
+  }
+  
+  /* Estilos gerais */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Cards e elementos */
+  .elemento-card {
+    background: white;
+    border-radius: 8px;
+    padding: var(--spacing);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease;
+  }
+  
+  .elemento-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .elemento-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  
+  /* Grid de elementos */
+  .grid-elementos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .elemento {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: #f9fafb;
+  }
+  
+  .elemento code {
+    display: inline-block;
+    background: #334155;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Seção interativa */
+  .secao-interativa {
+    padding: 2rem 0;
+  }
+  
+  .secao-interativa h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Tabela de atributos */
+  .tabela-atributos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .atributo {
+    padding: 1rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  /* Editor interativo */
+  .editor-interativo {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .editor-interativo textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-family: monospace;
+    margin-bottom: 1rem;
+  }
+  
+  .editor-interativo button {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .editor-interativo button:hover {
+    background: var(--secondary-color);
+  }
+  
+  /* Cards de dicas */
+  .cards-dicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .dica {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--secondary-color);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .footer-nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-nav a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  
+  .footer-nav a:hover {
+    opacity: 1;
+  }
+  
+  /* Media Queries para responsividade */
+  @media (max-width: 768px) {
+    .grid-elementos {
+      grid-template-columns: 1fr;
+    }
+    
+    .tabela-atributos {
+      grid-template-columns: 1fr;
+    }
+    
+    .cards-dicas {
+      grid-template-columns: 1fr;
+    }
+  }
